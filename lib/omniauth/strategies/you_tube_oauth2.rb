@@ -29,7 +29,7 @@ module OmniAuth
           :name => raw_info['author']['name'],
           :first_name => raw_info['firstName'],
           :last_name => raw_info['lastName'],
-          :image => raw_info['thumbnail']['url']
+          :image => raw_info['thumbnail']['url'].sub(%r{/s\d+-c-k}, '/s250-c-k')
         }
       end
 
